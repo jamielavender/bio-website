@@ -1,0 +1,93 @@
+html, body {
+  font-family: Arial;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #000;
+    color: white;
+  }
+  .content-start {
+    background: linear-gradient(to bottom, #191970, #000);
+  }
+
+  .content-end {
+    background: linear-gradient(to top, #191970, #000);
+  }
+  .content-one a img:hover {background-color: #ffffff55; transition-duration: 0.3s;}
+  .tag {border-color: #fff;}
+  .footer {background-color: #191970;}
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: #fff;
+    color: black;
+  }
+  .content-start {
+    background: linear-gradient(to bottom, #00bbff, #fff);
+  }
+
+  .content-end {
+    background: linear-gradient(to top, #00bbff, #fff);
+  }
+  .content-one a img:hover {background-color: #00000055; transition-duration: 0.3s;}
+  .tag {border-color: #000;}
+  .footer {background-color: #00bbff;}
+}
+
+.content-start {
+  -webkit-animation: fadein 2s!important; /* Safari, Chrome and Opera > 12.1 */
+  animation: fadein 2s!important;
+}
+
+.content-end, .footer {
+  -webkit-animation: fadein 4s!important; /* Safari, Chrome and Opera > 12.1 */
+  animation: fadein 4s!important;
+}
+
+
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+.section {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5% 0;
+}
+
+.content {
+  border-radius: 15px;
+  padding: 30px 20px;
+  max-width: 600px;
+  width: 75%;
+}
+
+.content-one > a {
+  padding: 10px 10px;
+}
+
+.content-one > a > img {
+  padding: 7px 7px;
+  border-radius: 4px;
+  transition-duration: 0.3s;
+}
+
+.tag {
+  border: 1px solid;
+  border-radius: 100cm;
+  padding: 3px 12px;
+}
+
+.tag:hover {
+  cursor: default;
+}
